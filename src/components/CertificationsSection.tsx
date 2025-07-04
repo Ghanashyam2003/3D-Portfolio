@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -27,23 +28,62 @@ const CertificationsSection = () => {
       issuer: "JPMorgan Chase & Co.",
       date: "2024",
       description: "Completed virtual internship focusing on software engineering practices and financial technology solutions",
-      color: "from-blue-500 to-cyan-600"
+      color: "from-blue-500 to-cyan-600",
+      link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_DBQPyyCYjEZowoHDN_1738653930680_completion_certificate.pdf"
     },
     {
-      title: "Skyscanner System Design",
-      issuer: "Skyscanner",
+      title: "Skyscanner - Software Engineering Job Simulation",
+      issuer: "Forage",
       date: "2024",
       description: "Advanced system design principles for large-scale applications and distributed systems",
-      color: "from-purple-500 to-violet-600"
+      color: "from-purple-500 to-violet-600",
+      link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/skoQmxqhtgWmKv2pm/p3xGFkpdot5H8NBih_skoQmxqhtgWmKv2pm_DBQPyyCYjEZowoHDN_1738952010252_completion_certificate.pdf"
     },
     {
-      title: "Advanced React Development",
+      title: "Tata Group - Cybersecurity Analyst Job Simulation",
+      issuer: "Forage",
+      date: "2025",
+      description: "Comprehensive cybersecurity analysis and threat detection simulation program",
+      color: "from-red-500 to-pink-600",
+      link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gmf3ypEXBj2wvfQWC_ifobHAoMjQs9s6bKS_DBQPyyCYjEZowoHDN_1739360378604_completion_certificate.pdf"
+    },
+    {
+      title: "Linux Command Line: From Zero to Hero",
       issuer: "Udemy",
-      date: "2023",
-      description: "Comprehensive course covering advanced React patterns, hooks, and performance optimization",
-      color: "from-green-500 to-emerald-600"
+      date: "Mar 2025",
+      description: "Comprehensive Linux command line course covering advanced terminal operations and system administration",
+      color: "from-green-500 to-emerald-600",
+      link: "https://www.udemy.com/certificate/UC-a991be10-c382-4777-a3e2-ab582735d480/"
+    },
+    {
+      title: "SQL for Developers, Data Analysts and BI. MySQL for everyone",
+      issuer: "Udemy",
+      date: "Mar 2025",
+      description: "Advanced SQL course covering database design, optimization, and business intelligence applications",
+      color: "from-orange-500 to-red-600",
+      link: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-270e57eb-b3f9-42fb-91d5-c8cd55d04b2f.pdf"
+    },
+    {
+      title: "Figma Essential for User Interface and User Experience UI UX",
+      issuer: "Udemy",
+      date: "Feb 2025",
+      description: "Complete Figma course covering UI/UX design principles and advanced prototyping techniques",
+      color: "from-indigo-500 to-purple-600",
+      link: "https://www.udemy.com/certificate/UC-5aab1294-2872-4593-b794-bbb1643cea0f/"
+    },
+    {
+      title: "UI/UX Design Masterclass with Adobe XD: From Beginner to Pro",
+      issuer: "Udemy",
+      date: "2024",
+      description: "Advanced Adobe XD course covering complete UI/UX design workflow from concept to prototype",
+      color: "from-pink-500 to-rose-600",
+      link: "https://www.udemy.com/certificate/UC-8d252da0-73f4-4876-a5d3-737b3788548b/"
     }
   ];
+
+  const handleCertClick = (link: string) => {
+    window.open(link, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <section id="certifications" className="certifications-section py-20 px-6 bg-black relative">
@@ -86,7 +126,10 @@ const CertificationsSection = () => {
                         </p>
                       </div>
                       
-                      <button className="premium-button opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center px-4 py-2 bg-white/10 rounded-full text-white border border-white/20 hover:border-white/40">
+                      <button 
+                        onClick={() => handleCertClick(cert.link)}
+                        className="premium-button opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center px-4 py-2 bg-white/10 rounded-full text-white border border-white/20 hover:border-white/40"
+                      >
                         View Credential
                         <ArrowUpRight size={16} className="ml-2" />
                       </button>

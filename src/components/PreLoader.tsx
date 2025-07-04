@@ -84,4 +84,4 @@ const PreLoader = () => {
   );
 };
 
-export default PreLoader;   
+export default PreLoader;

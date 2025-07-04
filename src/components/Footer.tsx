@@ -92,7 +92,15 @@ const Footer = () => {
             © 2024 Ghanashyam Badgujar. All rights reserved.
           </p>
           <p className="text-gray-500 text-sm">
-            Made with ❤️ and lots of ☕
+            Made with ❤️ by{' '}
+            <a
+              href="https://www.linkedin.com/in/ghanashyam2003/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-600 transition-colors duration-300"
+            >
+              Ghanashyam Badgujar
+            </a>
           </p>
         </div>
       </div>

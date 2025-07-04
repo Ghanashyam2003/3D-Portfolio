@@ -82,7 +82,10 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="contact-section py-20 px-6 bg-black relative">
+    <section
+      id="contact"
+      className="contact-section py-20 px-6 bg-black relative"
+    >
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
@@ -115,7 +118,7 @@ const ContactSection = () => {
                   className="glass-input w-full p-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors duration-300 backdrop-blur-md"
                 />
               </div>
-              
+
               <div className="form-field">
                 <input
                   type="email"
@@ -127,7 +130,7 @@ const ContactSection = () => {
                   className="glass-input w-full p-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors duration-300 backdrop-blur-md"
                 />
               </div>
-              
+
               <div className="form-field">
                 <textarea
                   name="message"
@@ -139,7 +142,7 @@ const ContactSection = () => {
                   className="glass-input w-full p-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors duration-300 backdrop-blur-md resize-none"
                 ></textarea>
               </div>
-              
+
               <button
                 type="submit"
                 className="submit-btn premium-button w-full flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl text-white font-medium hover:scale-105 transition-transform duration-300 glow-effect"
@@ -153,49 +156,66 @@ const ContactSection = () => {
           {/* Contact Info */}
           <div className="contact-info">
             <div className="glass-card backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
-              
+              <h3 className="text-2xl font-bold text-white mb-6">
+                Get in Touch
+              </h3>
+
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-lg font-medium text-blue-400 mb-2">Education</h4>
+                  <h4 className="text-lg font-medium text-blue-400 mb-2">
+                    Education
+                  </h4>
                   <p className="text-gray-300">
-                    MCA - Mumbai University (2024-2026)<br />
+                    MCA - Mumbai University (2024-2026)
+                    <br />
                     BSc Computer Science - North Maharashtra University
                   </p>
                 </div>
-                
+
                 <div>
-                  <h4 className="text-lg font-medium text-purple-400 mb-2">Specialization</h4>
+                  <h4 className="text-lg font-medium text-purple-400 mb-2">
+                    Specialization
+                  </h4>
                   <p className="text-gray-300">
                     Full-Stack Development • React.js • Node.js • MongoDB
                   </p>
                 </div>
-                
+
                 <div>
-                  <h4 className="text-lg font-medium text-violet-400 mb-2">Location</h4>
+                  <h4 className="text-lg font-medium text-violet-400 mb-2">
+                    Location
+                  </h4>
                   <p className="text-gray-300">Mumbai, India</p>
                 </div>
               </div>
 
               {/* Social Links */}
               <div className="mt-8 pt-8 border-t border-white/10">
-                <h4 className="text-lg font-medium text-white mb-4">Connect with me</h4>
+                <h4 className="text-lg font-medium text-white mb-4">
+                  Connect with me
+                </h4>
                 <div className="flex space-x-4">
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/ghanashyam2003/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-link flex items-center justify-center w-12 h-12 bg-white/10 rounded-xl hover:bg-blue-500/20 transition-colors duration-300 group"
                   >
-                    <LinkedinLogo size={20} className="text-white group-hover:text-blue-400" />
+                    <LinkedinLogo
+                      size={20}
+                      className="text-white group-hover:text-blue-400"
+                    />
                   </a>
                   <a
-                    href="https://github.com"
+                    href="https://github.com/Ghanashyam2003"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-link flex items-center justify-center w-12 h-12 bg-white/10 rounded-xl hover:bg-purple-500/20 transition-colors duration-300 group"
                   >
-                    <GithubLogo size={20} className="text-white group-hover:text-purple-400" />
+                    <GithubLogo
+                      size={20}
+                      className="text-white group-hover:text-purple-400"
+                    />
                   </a>
                 </div>
               </div>

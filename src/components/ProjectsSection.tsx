@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -21,50 +22,99 @@ const ProjectsSection = () => {
     });
   }, []);
 
-  const projects = [
-    {
-      title: "Cancer Donation Platform",
-      description: "Full-stack donation platform with Google OAuth and Instamojo payment integration",
-      tech: ["React", "Node.js", "MongoDB", "OAuth", "Instamojo"],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop",
-      gradient: "from-pink-500 to-rose-600"
-    },
-    {
-      title: "Zerodha Clone",
-      description: "Stock trading platform clone with real-time charts and portfolio management",
-      tech: ["React", "Chart.js", "WebSocket", "Node.js"],
-      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop",
-      gradient: "from-blue-500 to-cyan-600"
-    },
-    {
-      title: "StreamMate",
-      description: "Video streaming platform with live chat and user management",
-      tech: ["React", "WebRTC", "Socket.io", "Express"],
-      image: "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=600&h=400&fit=crop",
-      gradient: "from-purple-500 to-violet-600"
-    },
-    {
-      title: "AI Task Manager",
-      description: "Smart task management with AI-powered suggestions and automation",
-      tech: ["React", "OpenAI", "MongoDB", "GSAP"],
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
-      gradient: "from-green-500 to-emerald-600"
-    },
-    {
-      title: "3D Portfolio",
-      description: "Interactive 3D portfolio with Spline integration and scroll animations",
-      tech: ["React", "Spline", "GSAP", "Three.js"],
-      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop",
-      gradient: "from-indigo-500 to-purple-600"
-    },
-    {
-      title: "E-Commerce Dashboard",
-      description: "Admin dashboard with analytics, inventory management, and real-time updates",
-      tech: ["React", "D3.js", "Redis", "PostgreSQL"],
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop",
-      gradient: "from-orange-500 to-red-600"
-    }
-  ];
+   const projects = [
+  {
+    title: "Cancer Donation Platform",
+    description:
+      "Full‑stack platform connecting donors with cancer patients. Secure login, instant payments.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "OAuth 2.0", "Instamojo"],
+    highlights: [
+      "Google OAuth 2.0 authentication",
+      "Instamojo UPI / card payments",
+      "Real‑time donor feed via MongoDB change streams",
+    ],
+    image: "/src/assets/cancer.png",
+    gradient: "from-pink-500 to-rose-600",
+    link: "https://cancer-support-website.onrender.com/",
+  },
+  {
+    title: "AI Task Manager",
+    description:
+      "Smart productivity app that uses GPT to suggest, prioritise, and automate daily tasks.",
+    tech: ["React", "OpenAI API", "MongoDB", "GSAP"],
+    highlights: [
+      "GPT‑powered task suggestions",
+      "Deadline predictions & reminders",
+      "Smooth GSAP dashboard animations",
+    ],
+    image: "/src/assets/Ai.png",
+    gradient: "from-green-500 to-emerald-600",
+    link: "https://ai-sensai.vercel.app/",
+  },
+  {
+    title: "StreamMate",
+    description:
+      "Peer‑to‑peer video‑streaming platform with live chat and role‑based rooms.",
+    tech: ["React", "WebRTC", "Socket.io", "Node.js", "Express"],
+    highlights: [
+      "WebRTC low‑latency streams",
+      "Socket.io live chat",
+      "JWT user authentication",
+    ],
+    image: "/src/assets/video.png",
+    gradient: "from-purple-500 to-violet-600",
+    link: "https://github.com/Ghanashyam2003/StreamMate",
+  },
+  {
+    title: "Zerodha Clone",
+    description:
+      "Real‑time stock‑trading UI with live charts and mock portfolio tracking.",
+    tech: ["React", "Chart.js", "WebSocket", "Node.js"],
+    highlights: [
+      "Candlestick & depth charts",
+      "Paper‑trading via WebSocket feed",
+      "Responsive order window",
+    ],
+    image: "/src/assets/zerodha.png",
+    gradient: "from-blue-500 to-cyan-600",
+    link: "https://github.com/Ghanashyam2003/Zerodha-clone",
+  },
+  {
+    title: "Mumbai Tourist AI Guide",
+    description:
+      "Offline‑ready AI travel assistant that gives hyper‑local tips without internet.",
+    tech: ["Python", "LangChain", "LLM", "PWA"],
+    highlights: [
+      "LangChain local LLM",
+      "PWA caching for offline use",
+      "Geo‑tagged point‑of‑interest DB",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=600&h=400&fit=crop",
+    gradient: "from-orange-500 to-yellow-600",
+    link: "https://github.com/Ghanashyam2003/Local_Ai_Agent",
+  },
+  {
+    title: "3D Portfolio",
+    description:
+      "Immersive personal site featuring a Spline 3‑D hero and GSAP scroll magic.",
+    tech: ["React", "Spline", "Three.js", "GSAP", "Tailwind"],
+    highlights: [
+      "Spline interactive robot",
+      "Scroll‑triggered parallax",
+      "Fully responsive & dark‑mode",
+    ],
+    image: "/src/assets/portfolio.png",
+    gradient: "from-indigo-500 to-purple-600",
+    link: "#",
+  },
+];
+
+
+  const handleProjectClick = (link: string) => {
+    if (link === "#") return;
+    window.open(link, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <section id="projects" className="projects-section py-20 px-6 bg-black relative">
@@ -103,7 +153,10 @@ const ProjectsSection = () => {
                   
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <button className="premium-button flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white border border-white/30">
+                    <button 
+                      onClick={() => handleProjectClick(project.link)}
+                      className="premium-button flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white border border-white/30 hover:border-white/50 transition-all duration-300"
+                    >
                       <Globe size={16} className="mr-2" />
                       View Project
                       <ArrowUpRight size={16} className="ml-2" />
